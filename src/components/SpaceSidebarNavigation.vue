@@ -31,7 +31,10 @@ const isAdmin = computed(() => {
         {{ $t('proposals.header') }}
       </BaseSidebarNavigationItem>
     </router-link>
-    <router-link :to="{ name: 'spaceCreate' }" v-slot="{ isExactActive }">
+    <router-link
+      :to="{ name: 'spaceCreate', params: { step: 1 } }"
+      v-slot="{ isExactActive }"
+    >
       <BaseSidebarNavigationItem :isActive="isExactActive">
         {{ $t('proposals.new') }}
       </BaseSidebarNavigationItem>
